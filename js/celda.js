@@ -56,7 +56,7 @@ function avanzarCelda(nuevaCelda, index) {
 
 function mostrarModal(nuevaCelda, index) {
     document.getElementById('modal-general').innerHTML = `
-    <div class="container-fluid body-modal">
+    <div class=" body-modal">
     <div class="container-fluid text-center contenedor-imagen-modal">
         <img class="img-modal" src="./img/house.jpg">
     </div>

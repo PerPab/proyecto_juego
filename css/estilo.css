@@ -118,10 +118,13 @@ dialog{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 1rem;
+    border: solid 2px black;
 }
 
 .contenedor-texto-modal{
     height: 40vh;
+    border: solid 2px black;
 }
 
 .contenedor-boton-modal{
@@ -129,6 +132,7 @@ dialog{
     align-items: center;
     justify-content: center;
     height: 18vh;
+    border: solid 2px black;
 }
 
 .modal-general{
