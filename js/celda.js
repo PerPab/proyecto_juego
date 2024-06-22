@@ -1,6 +1,6 @@
 
 
-function mostrarModal(nuevaCelda, index) {
+/*function mostrarModal(nuevaCelda, index) {
     Swal.fire({
         title: "Quieres avanzar a la casilla " + nuevaCelda,
         text: "Quieres avanzar a la casilla " + nuevaCelda,
@@ -14,8 +14,26 @@ function mostrarModal(nuevaCelda, index) {
             avanzarCelda(nuevaCelda, index)
         }
     });
-}
+}*/
+/**function avanzarCelda(nuevaCelda, index) {
+    const newcells = document.querySelectorAll('.celda');
+    newcells.forEach((celda) => {
+        if (celda.classList.contains('disponible')) {
+            celda.classList.add('inactiva');
+            celda.classList.remove('disponible');
+        }
 
+        if (document.getElementById(nuevaCelda)) {
+            document.getElementById(nuevaCelda).classList.add('seleccionada');
+            document.getElementById(nuevaCelda).classList.remove('disponible');
+        }
+    })
+    if (document.getElementById(index)) {
+        document.getElementById(index).classList.add('inactiva');
+        document.getElementById(index).classList.remove('seleccionada');
+    }
+}
+ */
 
 function avanzarCelda(nuevaCelda, index) {
     const newcells = document.querySelectorAll('.celda');
@@ -34,10 +52,35 @@ function avanzarCelda(nuevaCelda, index) {
         document.getElementById(index).classList.add('inactiva');
         document.getElementById(index).classList.remove('seleccionada');
     }
-
 }
 
+function mostrarModal(nuevaCelda, index) {
+    document.getElementById('modal-general').innerHTML = `
+    <div class="container-fluid body-modal">
+    <div class="container-fluid text-center contenedor-imagen-modal">
+        <img class="img-modal" src="./img/house.jpg">
+    </div>
+    <div class="container-fluid contenedor-texto-modal text-center">
+        <p>quieres entrar a esta celda ${nuevaCelda}?</p> 
+    </div>
+    <div class="container-fluid text-center contenedor-boton-modal">
+        <button id="btn-aceptar-modal">aceptar</button>
+        <button id="btn-cancelar-modal">cancelar</button>
+    </div>
+</div>`
+    document.getElementById('modal-general').showModal()
 
+    document.getElementById('btn-aceptar-modal').addEventListener('click', () => {
+        avanzarCelda(nuevaCelda, index)
+        document.getElementById('modal-general').close()
+    })
+
+    document.getElementById('btn-cancelar-modal').addEventListener('click', () => {
+        document.getElementById('modal-general').close()
+    })
+
+    //avanzarCelda(nuevaCelda, index) /// esta funcion tiene que ir por fuera del modal
+}
 
 function PreguntarMovimientoCelda(index) {
     const cells = document.querySelectorAll('.celda');
