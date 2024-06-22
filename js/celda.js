@@ -1,6 +1,20 @@
 
 
-
+function mostrarModal(nuevaCelda, index) {
+    Swal.fire({
+        title: "Quieres avanzar a la casilla " + nuevaCelda,
+        text: "Quieres avanzar a la casilla " + nuevaCelda,
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Aceptar"
+    }).then((result) => {
+        if (result.isConfirmed) {
+            avanzarCelda(nuevaCelda, index)
+        }
+    });
+}
 
 
 function avanzarCelda(nuevaCelda, index) {
@@ -17,11 +31,12 @@ function avanzarCelda(nuevaCelda, index) {
         }
     })
     if (document.getElementById(index)) {
-        document.getElementById(index).classList.add('bloqueada');
+        document.getElementById(index).classList.add('inactiva');
         document.getElementById(index).classList.remove('seleccionada');
     }
 
 }
+
 
 
 function PreguntarMovimientoCelda(index) {
@@ -30,23 +45,10 @@ function PreguntarMovimientoCelda(index) {
         celda.addEventListener('click', (e) => {
             if (e.target.classList.contains('disponible')) {
                 let nuevaCelda = e.target.id;
-                Swal.fire({
-                    title: "Quieres avanzar a la casilla " + nuevaCelda,
-                    text: "Quieres avanzar a la casilla " + nuevaCelda,
-                    icon: "warning",
-                    showCancelButton: true,
-                    confirmButtonColor: "#3085d6",
-                    cancelButtonColor: "#d33",
-                    confirmButtonText: "Aceptar"
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        avanzarCelda(nuevaCelda, index)
-                    }
-                });
+                mostrarModal(nuevaCelda, index);   // aca debe abrirse el modal con los dialogos
             }
         })
-    }
-    )
+    })
 }
 
 export function mostrarCeldasDisponibles() {
