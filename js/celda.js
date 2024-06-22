@@ -68,21 +68,21 @@ export function mostrarCeldasDisponibles() {
                     if (document.getElementById(`${colNumber}-${rowNumber - 1}`).classList.contains('inactiva')) {
                         document.getElementById(`${colNumber}-${rowNumber - 1}`).classList.remove('inactiva');
                         document.getElementById(`${colNumber}-${rowNumber - 1}`).classList.add('disponible');
-                        document.getElementById(`${colNumber}-${rowNumber + 1}`).addEventListener('click', PreguntarMovimientoCelda(index))
+                        document.getElementById(`${colNumber}-${rowNumber - 1}`).addEventListener('click', PreguntarMovimientoCelda(index))
                     }
                 }
                 if (document.getElementById(`${colNumber - 1}-${rowNumber}`)) {
                     if (document.getElementById(`${colNumber - 1}-${rowNumber}`).classList.contains('inactiva')) {
                         document.getElementById(`${colNumber - 1}-${rowNumber}`).classList.remove('inactiva');
                         document.getElementById(`${colNumber - 1}-${rowNumber}`).classList.add('disponible');
-                        document.getElementById(`${colNumber}-${rowNumber + 1}`).addEventListener('click', PreguntarMovimientoCelda(index))
+                        document.getElementById(`${colNumber - 1}-${rowNumber}`).addEventListener('click', PreguntarMovimientoCelda(index))
                     }
                 }
                 if (document.getElementById(`${colNumber + 1}-${rowNumber}`)) {
                     if (document.getElementById(`${colNumber + 1}-${rowNumber}`).classList.contains('inactiva')) {
                         document.getElementById(`${colNumber + 1}-${rowNumber}`).classList.remove('inactiva');
                         document.getElementById(`${colNumber + 1}-${rowNumber}`).classList.add('disponible');
-                        document.getElementById(`${colNumber}-${rowNumber + 1}`).addEventListener('click', PreguntarMovimientoCelda(index))
+                        document.getElementById(`${colNumber + 1}-${rowNumber}`).addEventListener('click', PreguntarMovimientoCelda(index))
                     }
                 }
             }
