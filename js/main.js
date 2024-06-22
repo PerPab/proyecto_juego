@@ -1,5 +1,9 @@
-import { asignarFuncionCelda, renderizarTablero } from "./renderizado.js"
+import { renderizarTablero } from "./renderizado.js"
+import { mostrarCeldasDisponibles } from "./celda.js";
+
+renderizarTablero();
+mostrarCeldasDisponibles()
 
 
-renderizarTablero()
-asignarFuncionCelda()
+
+
