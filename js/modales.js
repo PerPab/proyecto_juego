@@ -25,7 +25,7 @@ export function mostrarModalCuatroCombate() { //en el tercer modal se muestra un
 
 export function mostrarModalTresCombate() { //en el tercer modal se muestra una resolcucion a la opcion elegida
     document.getElementById('modal-general').innerHTML = `
-    <div class=" body-modal">
+    <div class="body-modal">
     <div class="container-fluid text-center contenedor-imagen-modal">
         <img class="img-modal" src="./img/wolf.jpeg">
     </div>

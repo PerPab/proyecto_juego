@@ -8,6 +8,28 @@ export let personaje = {
     vida: 100
 }
 
-function abrirInventario() {
 
+
+function abrirInventario(personaje) {
+    const grillaItems = document.getElementById('grilla-items-inventario')
+    personaje.inventario.forEach((element) => {
+        const li = document.createElement('li');
+        li.textContent = element;
+        grillaItems.append(li)
+
+    });
+    document.getElementById('modal-inventario-jugador').showModal()
 }
+
+let btnInventario = document.getElementById('btn-abrir-inventario');
+let btnCerrarInventario = document.getElementById('btn-cerrar-inventario');
+
+btnInventario.addEventListener('click', () => {
+    abrirInventario(personaje)
+})
+
+btnCerrarInventario.addEventListener('click', () => {
+    const grillaItems = document.getElementById('grilla-items-inventario')
+    grillaItems.innerHTML = ``
+    document.getElementById('modal-inventario-jugador').close();
+})
