@@ -34,3 +34,9 @@ export function renderizarTablero() {
     }
 }
 
+
+/** for (let i = 1; i <= 5; i++) {
+        let plantilla = `<div id="8-${i}" data-index="${i}" data-row="${i}" data-col="${i}" class="grid-item celda ${i == 3 ? 'seleccionada' : 'inactiva'}"></div>`
+        document.getElementById('contenedor_tablero').innerHTML += plantilla;
+    } */
+

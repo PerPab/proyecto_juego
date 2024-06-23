@@ -25,14 +25,14 @@ export function mostrarModalTresCombate() { //en el tercer modal se muestra una 
 
 export function mostrarModalDosCombate() { //en el segundo modal se desencadena la accion, pueden existir 3 tipos de modales de accion || combate-puzzles-exploracion
     document.getElementById('modal-general').innerHTML = `
-    <div class=" body-modal">
-    <div class="container-fluid text-center contenedor-imagen-modal">
+    <div class="body-modal">
+    <div class="contenedor-imagen-modal">
         <img class="img-modal" src="./img/wolf.jpeg">
     </div>
-    <div class="container-fluid contenedor-texto-modal text-center">
+    <div class="contenedor-texto-modal">
         <p>en el segundo modal se desencadena la accion, pueden existir 3 tipos de modales de accion || combate-puzzles-exploracion</p> 
     </div>
-    <div class="container-fluid text-center contenedor-boton-modal">
+    <div class="contenedor-boton-modal">
         <button id="btn-atacar-modal">Atacar</button>
         <button id="btn-huir-modal">Huir</button>
         <button id="btn-usar-modal">Usar Objeto</button>
