@@ -17,7 +17,6 @@ dialog{
     height: 90vh;
     padding: 1rem;
     margin-top: 1rem;
- 
 }
 .celda{
     width: 4.1rem;
@@ -97,13 +96,8 @@ dialog{
     align-items: center;
     justify-content: center;
     border: solid 2px black;
-    border-radius: 5px;
 }
 
-.img-modal{
-    width: 100%;
-
-}
 
 .body-modal{
     display: flex;
@@ -119,12 +113,18 @@ dialog{
     justify-content: center;
     align-items: center;
     margin-top: 1rem;
-    border: solid 2px black;
+    overflow: hidden;
+}
+.img-modal{
+    width: 100%;
+    height: auto;
+
+
 }
 
 .contenedor-texto-modal{
     height: 40vh;
-    border: solid 2px black;
+
 }
 
 .contenedor-boton-modal{
@@ -132,7 +132,7 @@ dialog{
     align-items: center;
     justify-content: center;
     height: 18vh;
-    border: solid 2px black;
+    
 }
 
 .modal-general{

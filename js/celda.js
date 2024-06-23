@@ -1,4 +1,4 @@
-
+import { mostrarModalUno } from "./modales.js";
 
 /*function mostrarModal(nuevaCelda, index) {
     Swal.fire({
@@ -35,7 +35,7 @@
 }
  */
 
-function avanzarCelda(nuevaCelda, index) {
+export function avanzarCelda(nuevaCelda, index) {
     const newcells = document.querySelectorAll('.celda');
     newcells.forEach((celda) => {
         if (celda.classList.contains('disponible')) {
@@ -54,41 +54,13 @@ function avanzarCelda(nuevaCelda, index) {
     }
 }
 
-function mostrarModal(nuevaCelda, index) {
-    document.getElementById('modal-general').innerHTML = `
-    <div class=" body-modal">
-    <div class="container-fluid text-center contenedor-imagen-modal">
-        <img class="img-modal" src="./img/house.jpg">
-    </div>
-    <div class="container-fluid contenedor-texto-modal text-center">
-        <p>quieres entrar a esta celda ${nuevaCelda}?</p> 
-    </div>
-    <div class="container-fluid text-center contenedor-boton-modal">
-        <button id="btn-aceptar-modal">aceptar</button>
-        <button id="btn-cancelar-modal">cancelar</button>
-    </div>
-</div>`
-    document.getElementById('modal-general').showModal()
-
-    document.getElementById('btn-aceptar-modal').addEventListener('click', () => {
-        avanzarCelda(nuevaCelda, index)
-        document.getElementById('modal-general').close()
-    })
-
-    document.getElementById('btn-cancelar-modal').addEventListener('click', () => {
-        document.getElementById('modal-general').close()
-    })
-
-    //avanzarCelda(nuevaCelda, index) /// esta funcion tiene que ir por fuera del modal
-}
-
 function PreguntarMovimientoCelda(index) {
     const cells = document.querySelectorAll('.celda');
     cells.forEach(celda => {
         celda.addEventListener('click', (e) => {
             if (e.target.classList.contains('disponible')) {
                 let nuevaCelda = e.target.id;
-                mostrarModal(nuevaCelda, index);   // aca debe abrirse el modal con los dialogos
+                mostrarModalUno(nuevaCelda, index);   // aca debe abrirse el modal con los dialogos
             }
         })
     })
