@@ -4,7 +4,7 @@ html{
 
 body{
     margin: 0rem;
-    background-color: lightgoldenrodyellow;
+    background-color: rgb(249, 249, 249);
 }
 
 dialog:modal {
@@ -13,11 +13,12 @@ dialog:modal {
     border: none;
     border-radius: 10px;
     margin: 0.5rem;
+    margin: auto;
   }
 
-dialog ::backdrop {
-    backdrop-filter: blur(10px);
-}
+/*dialog ::backdrop {
+    backdrop-filter: blur(100px);
+}*/
 
 .contenedor-principal{
     display: flex;
@@ -42,6 +43,7 @@ dialog ::backdrop {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(8, 1fr);
     gap: 5px;
+    background-color: lightgoldenrodyellow;
     
 }
 .grid-item {
@@ -125,7 +127,7 @@ dialog ::backdrop {
 
 .body-modal{
     display: grid;
-    grid-template-rows: 30% 50% 20%;
+    grid-template-rows: 30% 50% 15%;
     height: 90vh;
 }
 .contenedor-imagen-modal{
@@ -170,22 +172,53 @@ dialog ::backdrop {
     width: 90%;
 }
 
+.modal-inventario-jugador{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
 
-/*.modal-general-inventario{
+.inventario-grilla{
     display: flex;
+    height: 40vh;
     flex-direction: column;
-    width: 90%;
-    height: 70%;
-}*/
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: solid black 2px;
+    margin: 0.5rem;
+}
 
+.inventario-descripcion{
+    display: flex;
+    height: 35vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: solid black 2px;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+.inventario-botones{
+    display: flex;
+    height: 10vh;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    border: solid black 2px;
+    margin: 0.5rem;
+}
 .body-modal-inventario{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 80vw;
-    height: 80vh;
+    width: 85vw;
+    height: 90vh;
 }
+
 
 
 
