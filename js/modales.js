@@ -9,7 +9,7 @@ export function mostrarModalCuatroCombate() { //en el tercer modal se muestra un
     <div class="container-fluid text-center contenedor-imagen-modal">
         <img class="img-modal" src="./img/wolf.jpeg">
     </div>
-    <div class="container-fluid contenedor-texto-modal text-center">
+    <div class="container-fluid contenedor-texto-modal">
         <p>En el ultimo modal de combate se muestra un mensaje de cierre del combate y si se ganó algun loot se muestra aca.
         al aceptar se regresa a la grilla o si el personaje murio hay un mensaje sobre eso y se regresa al menu.</p> 
     </div>
@@ -29,7 +29,7 @@ export function mostrarModalTresCombate() { //en el tercer modal se muestra una 
     <div class="container-fluid text-center contenedor-imagen-modal">
         <img class="img-modal" src="./img/wolf.jpeg">
     </div>
-    <div class="container-fluid contenedor-texto-modal text-center">
+    <div class="container-fluid contenedor-texto-modal">
         <p>las pelean utilizan la (dados + fuerza del jugador + item equipado) -  (tirada de dados de defensa +la constitucion del enemigo)
         si el resultado es cero o menor a cero entonces se resistió el ataque, en cambio si el resultado es mayor a cero, ese valor se le resta del pool de vida del enemigo, 
         cuando llega a cero muere y el combate termina.
@@ -46,7 +46,7 @@ export function mostrarModalTresCombate() { //en el tercer modal se muestra una 
 </div>`
     document.getElementById('modal-general').showModal()
     document.getElementById('btn-aceptar-modal').addEventListener('click', () => {
-        document.getElementById('modal-general').close()
+        mostrarModalCuatroCombate()
     })
 }
 
@@ -81,7 +81,7 @@ export function mostrarModalUno(nuevaCelda, index) {  //este modal muestra la pr
     <div class="container-fluid text-center contenedor-imagen-modal">
         <img class="img-modal" src="./img/house.jpg">
     </div>
-    <div class="container-fluid contenedor-texto-modal text-center">
+    <div class="container-fluid contenedor-texto-modal">
         <p>quieres entrar a esta celda ${nuevaCelda}?</p> 
         <p>este modal muestra la presentacion a la situacion de la celda.
         Al aceptar se mueve hacia esa celda y puede darse una situacion: las situaciones se catalogan en 1- combates,
@@ -91,7 +91,7 @@ export function mostrarModalUno(nuevaCelda, index) {  //este modal muestra la pr
         o abrir puertas cerradas que van a conectar con lugares importantes del mapa, para esto se necesitan llaves o claves que se encuentran explorando, y se guardan como items en el inventario,
         tambien el jugador podría usar item + fuerza para romper la puerta o item + agilidad para intentar abrirla con ganzúa.
         3- las situaciones neutrales pueden ser que el jugador tenga una charla con un npc para empujar la narrativa de la historia, o encuentre alguna escena y sea narrada, si un enemigo no se genera en esta celda puede darse 
-        que el jugador simplemente siga avanzando si nada particular</p> 
+        que el jugador simplemente siga avanzando sin nada particular</p> 
     </div>
     <div class="container-fluid text-center contenedor-boton-modal">
         <button id="btn-aceptar-modal">aceptar</button>
