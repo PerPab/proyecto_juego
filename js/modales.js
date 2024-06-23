@@ -1,6 +1,6 @@
 
 import { avanzarCelda } from "./celda.js"
-
+// diferentes modales para cada situacion
 
 export function mostrarModalTresCombate() { //en el tercer modal se muestra una resolcucion a la opcion elegida
     document.getElementById('modal-general').innerHTML = `

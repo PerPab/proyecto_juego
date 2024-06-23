@@ -1,12 +1,13 @@
 body{
     margin: 0rem;
-    background-color: darkgray;
+    background-color: lightgoldenrodyellow;
 }
 
 dialog:modal {
     max-width: 100vw;
     max-height: 100vh;
     border: none;
+    border-radius: 10px;
     margin: 0.5rem;
   }
 
@@ -40,7 +41,7 @@ dialog ::backdrop {
     
 }
 .grid-item {
-    border: 3px solid rgb(255, 255, 255);
+    border: 2px solid rgb(9, 9, 9);
     border-radius: 4px;
     padding: 2px;
     transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);

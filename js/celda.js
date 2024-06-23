@@ -1,39 +1,7 @@
 import { mostrarModalUno } from "./modales.js";
 
-/*function mostrarModal(nuevaCelda, index) {
-    Swal.fire({
-        title: "Quieres avanzar a la casilla " + nuevaCelda,
-        text: "Quieres avanzar a la casilla " + nuevaCelda,
-        icon: "warning",
-        showCancelButton: true,
-        confirmButtonColor: "#3085d6",
-        cancelButtonColor: "#d33",
-        confirmButtonText: "Aceptar"
-    }).then((result) => {
-        if (result.isConfirmed) {
-            avanzarCelda(nuevaCelda, index)
-        }
-    });
-}*/
-/**function avanzarCelda(nuevaCelda, index) {
-    const newcells = document.querySelectorAll('.celda');
-    newcells.forEach((celda) => {
-        if (celda.classList.contains('disponible')) {
-            celda.classList.add('inactiva');
-            celda.classList.remove('disponible');
-        }
 
-        if (document.getElementById(nuevaCelda)) {
-            document.getElementById(nuevaCelda).classList.add('seleccionada');
-            document.getElementById(nuevaCelda).classList.remove('disponible');
-        }
-    })
-    if (document.getElementById(index)) {
-        document.getElementById(index).classList.add('inactiva');
-        document.getElementById(index).classList.remove('seleccionada');
-    }
-}
- */
+// funciones para asiganr clases y eventos a las celdas, preguntar si se queire avanzar y realizar el avance del jugador
 
 export function avanzarCelda(nuevaCelda, index) {
     const newcells = document.querySelectorAll('.celda');

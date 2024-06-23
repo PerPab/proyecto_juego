@@ -1,4 +1,4 @@
-
+// aca se renderiza la grilla, la idea es pasar por parametro el mapa con sus objetos cargados
 export function renderizarTablero() {
     for (let i = 1; i <= 5; i++) {
         let plantilla = `<div id="1-${i}" data-index="${i}" data-row="${i}" data-col="${i}" class="grid-item celda inactiva"></div>`
